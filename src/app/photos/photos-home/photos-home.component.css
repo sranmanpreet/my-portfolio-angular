@@ -1,0 +1,33 @@
+div {
+    width: 40px;
+    height: 40px;
+    margin: 40px;
+    box-shadow: 0px 0px 10px 5px #000;
+    animation: spinShadow 2s infinite;
+    background-color: #000;
+}
+
+@keyframes spinShadow {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg) translate(-10px, -10px) rotate(0deg);
+    animation: inherit;
+    animation-name: spinElt;
+    background-color: #0bb;
+}
+
+@keyframes spinElt {
+    to {
+        transform: rotate(-360deg) translate(-10px, -10px) rotate(360deg);
+    }
+}
