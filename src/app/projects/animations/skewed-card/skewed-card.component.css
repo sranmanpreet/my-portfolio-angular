@@ -1,5 +1,5 @@
 .myDiv {
-    margin-top: 100px;
+    margin: 100px;
     padding-top: 100px;
     text-align: center;
     width: 300px;
@@ -8,7 +8,6 @@
     transform: skew(20deg, 10deg);
     border-radius: 15px;
     box-shadow: -10px 10px 10px #888888;
-    position: absolute;
     left: 275px;
     animation-name: slideIn;
     animation-duration: 2s;

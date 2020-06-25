@@ -1,0 +1,30 @@
+.hero-title {
+    height: 100vh;
+    width: 100%;
+    text-align: left;
+    background-size: cover;
+    color: white;
+    padding-top: 20vh;
+}
+
+.hero-title h1 {
+    font-size: 20px;
+    color: #00ebd7;
+}
+
+.hero-title h2 {
+    font-size: 70px;
+    color: #f1f1f1;
+}
+
+.hero-title h3 {
+    font-size: 60px;
+    color: #b8b7b7;
+}
+
+.hero-title h4 {
+    font-size: 20px;
+    color: #999696;
+    display: flex;
+    width: 40vw;
+}

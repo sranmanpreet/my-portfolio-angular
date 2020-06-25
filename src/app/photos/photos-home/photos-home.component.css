@@ -1,4 +1,4 @@
-div {
+.box {
     width: 40px;
     height: 40px;
     margin: 40px;
@@ -13,7 +13,7 @@ div {
     }
 }
 
-div:before {
+.box:before {
     content: '';
     position: absolute;
     left: -5px;
