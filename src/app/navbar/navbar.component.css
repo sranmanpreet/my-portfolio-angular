@@ -5,3 +5,7 @@
 .navbar-light {
     color: white;
 }
+
+.custom-navbar {
+    background-color: #02212b !important;
+}

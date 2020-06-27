@@ -17,31 +17,51 @@ import { trigger, transition, query, style, stagger, animate, state } from '@ang
         height: '80px',
         opacity: 1
       })),
-      transition('transparent => solid', [
-        animate('0.5s')
-      ]),
-      transition('solid => transparent', [
+      transition('transparent <=> solid', [
         animate('0.5s')
       ])
     ]),
+    trigger('navbarAnimationHide', [
+      state('hide', style({
+        top: '-100px'
+      })),
+      state('show', style({
+        top: '0px'
+      })),
+      transition('hide <=> show', [
+        animate('0.5s')
+      ])
+    ])
   ]
 })
 export class NavbarComponent implements OnInit {
 
   isTransparent = true;
+  previousScrollPosition = 0;
+  displayNavbar = true;
 
   constructor(private navbarService: NavbarService) { }
 
   ngOnInit(): void {
+    this.previousScrollPosition = window.pageYOffset;
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
     let element = document.querySelector('.navbar');
+    let currentScrollPosition = window.pageYOffset;
     if (window.pageYOffset < element.clientHeight) {
       this.isTransparent = true;
     } else {
       this.isTransparent = false;
+    }
+    if (currentScrollPosition > 200) {
+      if (this.previousScrollPosition > currentScrollPosition) {
+        this.displayNavbar = true;
+      } else {
+        this.displayNavbar = false;
+      }
+      this.previousScrollPosition = currentScrollPosition;
     }
   }
 
