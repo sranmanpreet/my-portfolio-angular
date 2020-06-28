@@ -1,0 +1,35 @@
+.logo {
+    font-size: 5rem;
+}
+
+.logo-m {
+    position: relative;
+    left: 50%;
+    color: yellow;
+    animation: logo_m 1s;
+}
+
+.logo-s {
+    position: relative;
+    left: 50%;
+    color: red;
+    animation: logo_s 1s;
+}
+
+@keyframes logo_m {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes logo_s {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 50%;
+    }
+}

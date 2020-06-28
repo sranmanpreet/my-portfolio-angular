@@ -16,6 +16,7 @@ import { ExperienceHomeComponent } from './experience/experience-home/experience
 import { RecentWorksHomeComponent } from './recent-works/recent-works-home/recent-works-home.component';
 import { ContactHomeComponent } from './contact/contact-home/contact-home.component';
 import { SkewedCardComponent } from './projects/animations/skewed-card/skewed-card.component';
+import { LogoComponent } from './projects/animations/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SkewedCardComponent } from './projects/animations/skewed-card/skewed-ca
     ExperienceHomeComponent,
     RecentWorksHomeComponent,
     ContactHomeComponent,
-    SkewedCardComponent
+    SkewedCardComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,

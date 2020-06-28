@@ -11,7 +11,6 @@ import { ContactHomeComponent } from './contact/contact-home/contact-home.compon
 
 
 const routes: Routes = [
-  { path: '', component: HeroComponent },
   { path: 'home', component: HeroComponent },
   { path: 'experience', component: ExperienceHomeComponent },
   { path: 'recent-works', component: RecentWorksHomeComponent },
